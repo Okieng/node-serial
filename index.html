@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serial Data Display</title>
+    <script src="https://cdn.socket.io/socket.io-3.1.1.min.js"></script>
+</head>
+<body>
+    <h1>Serial Data Display</h1>
+    <div id="data-container"></div>
+
+    <script>
+        const socket = io();
+
+        socket.on('data', (data) => {
+            const dataContainer = document.getElementById('data-container');
+            dataContainer.innerHTML = `Received: ${data}`;
+        });
+    </script>
+</body>
+</html>
