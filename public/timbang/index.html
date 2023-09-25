@@ -15,19 +15,34 @@
       const numericData = rawData.substring(startIndex, endIndex);
       
       // Menghapus angka nol di depan angka
-      const trimmedData = numericData.replace(/^0+/, '');
       
-      document.getElementById('dataDisplay').textContent = trimmedData;
+      
     }
 
     setInterval(fetchData, 100); // Memperbarui tampilan setiap 1 detik
 
-    
+    async function saveData() {
+      const dataToSave = numericData; // Pastikan nilai numericData benar di sini
+
+      const response = await fetch('/saveData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data: dataToSave }) // Pastikan format JSON sesuai dengan yang dibutuhkan oleh server
+      });
+
+      if (response.ok) {
+        console.log('Data saved successfully');
+      } else {
+        console.error('Failed to save data');
+      }
+    }
   </script>
 </head>
 <body>
   <div id="dataDisplay"></div>
-  
+  <button onclick="saveData()">Simpan ke Database</button>
 </body>
 <script>
     

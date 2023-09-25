@@ -1,0 +1,19 @@
+.logo{
+    width:10% !important;
+}
+
+.img-footer{
+    width:100%;
+}
+
+#dataDisplay{
+    font-family: 'Digital-7', sans-serif;
+    font-size: 24px;
+}
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url('../font/digital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

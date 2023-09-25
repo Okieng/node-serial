@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <style>
+    @media print {
+      /* CSS untuk tampilan cetak */
+      /* Misalnya: */
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px; /* Sesuaikan dengan ukuran logo */
+        height: auto;
+      }
+      /* ... tambahkan CSS lainnya ... */
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="img/LogoIMI.png" alt="Logo Perusahaan">
+    <h1>Laporan Data Perusahaan</h1>
+    <p>Tanggal: 01 September 2023</p>
+  </div>
+  <table id="data-table">
+    <thead>
+        <tr>
+            <th>asdasdas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>asasdasd</td>
+        </tr>
+    </tbody>
+  </table>
+  <!-- Tombol pencetakan -->
+  <button id="print-button">Cetak</button>
+</body>
+
+<script>
+    
+    document.getElementById("print-button").addEventListener("click", function() {
+    window.print();
+  });
+
+function printPage() {
+  window.print();
+}
+
+</script>
+</html>
